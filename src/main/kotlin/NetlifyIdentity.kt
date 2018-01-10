@@ -16,6 +16,8 @@ external class Authenticator {
     fun authenticate(auth: AuthArguments, block:(String?, AuthResult?)->Unit)
 }
 
-external object netlify {
+external val netlify: Netlify
+
+external class Netlify {
     fun default(args: NetlifyArguments): Authenticator
 }
